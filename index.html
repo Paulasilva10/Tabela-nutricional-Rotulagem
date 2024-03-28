@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tabela Nutricional</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <h1>Calculadora de Tabela Nutricional</h1>
+        <p>Insira o valor do nutriente em 100g do alimento:</p>
+<div class="input">
+        <div class="1">
+            <label for="carbs">Carboidratos totais (g):</label>
+            <input type="number" id="carbs" min="0">
+        </div>
+
+        <div class="2">
+            <label for="sugar">Açúcares totais (g):</label>
+            <input type="number" id="sugar" min="0">
+        </div>
+
+        <div class="3">
+            <label for="addsugar">Açúcares adicionados (g):</label>
+            <input type="number" id="addsugar" min="0">
+        </div>
+
+        <div class="4">
+            <label for="protein">Proteínas (g):</label>
+            <input type="number" id="protein" min="0">
+        </div>
+
+      
+        <div class="5">
+            <label for="fat">Gorduras totais (g):</label>
+            <input type="number" id="fat" min="0">
+        </div>
+        
+        <div class="6">
+            <label for="saturated">Gorduras saturadas (g):</label>
+            <input type="number" id="saturated" min="0">
+        </div>
+
+
+        <div class="7">
+            <label for="fattrans">Gorduras trans (g):</label>
+            <input type="number" id="fattrans" min="0">
+        </div>
+
+        <div class="8">
+            <label for="fiber">Fibra alimentar (g):</label>
+            <input type="number" id="fiber" min="0">
+        </div>
+
+        <div class="9">
+            <label for="na">Sódio (g):</label>
+            <input type="number" id="na" min="0">
+        </div>
+        <hr>
+        <dir>
+            <label for="portionWeight">Porção (g)</label>
+            <input type="number"  id="portionWeight" min="0" >
+        </dir>
+</div>
+        <button onclick="calculateTotal()">Calcular</button>
+
+
+        <table id="nutritionTable">
+            <tr>
+                <th>Nutriente</th>
+                <th>100g</th>
+                <th id="totalportionWeight">Porção</th>
+                <th>%VD</th>
+            </tr>
+            <tr>
+                <td>Valor energético (Kcal)</td>
+                <td id="totalCalories">-</td>
+                <td id="totalCaloriesPerPortion" >-</td>
+                <td id="vdCalories">-</td>
+            </tr>
+
+            <tr>
+                <td>Carboidratos totais(g)</td>
+                <td id="totalCarbs">-</td>
+                <td id="totalCarbsPerPortion">-</td>
+                <td id="vdCarbs">-</td>
+            </tr>
+
+            <tr>
+                <td>&nbsp&nbspAçúcares totais (g)</td>
+                <td id="totalSugar">-</td>
+                <td id="totalSugarPerPortion">-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>&nbsp&nbspAçúcares adicionados (g)</td>
+                <td id="totalAddSugar">-</td>
+                <td id="totalAddSugarPerPortion">-</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>Proteínas (g)</td>
+                <td id="totalProtein">-</td>
+                <td id="totalProteinPerPortion">-</td>
+                <td id="vdProtein" >-</td>
+            </tr>
+
+            <tr>
+                <td>Gorduras totais (g)</td>
+                <td id="totalFat">-</td>
+                <td id="totalFatPerPortion">-</td>
+                <td id="vdFat">-</td>
+            </tr>
+            <tr>
+                <td>&nbsp&nbspGorduras saturadas (g)</td>
+                <td id="totalsaturated">-</td>
+                <td id="totalsaturatedPerPortion" >-</td>
+                <td id="vdsaturated">-</td>
+            </tr>
+            <tr>
+                <td>&nbsp&nbspGorduras trans (g)</td>
+                <td id="totaltrans">-</td>
+                <td id="totaltransPerPortion">-</td>
+                <td id="vdtrans">-</td>
+            </tr>
+            <tr>
+                <td>Fibra alimentar (g)</td>
+                <td id="totalfiber">-</td>
+                <td id="totalfiberPerPortion">-</td>
+                <td id="vdfiber">-</td>
+            </tr>
+            <tr>
+                <td>Sódio (mg)</td>
+                <td id="totalNa" >-</td>
+                <td id="totalNaPerPortion">-</td>
+                <td id="vdNa">-</td>
+
+            </tr>
+            <caption>*Percentual de valores diários fornecidos pela porção
+            </caption>
+        </table>
+
+        <div id="frontNutritionalLabeling"></div>
+        <img src="" alt="Rotulagem Nutricional Frontal" id="alertImg" style="display: none;">
+
+        <script src="script.js"></script>
+</body>
+
+</html>
